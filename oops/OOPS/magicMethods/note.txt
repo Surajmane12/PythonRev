@@ -1,0 +1,50 @@
+Python Magic Methods — Short Notes
+Magic methods (also called dunder methods) are special methods in Python that are automatically called when we perform certain operations on objects.
+1. __init__() — Initialize an object
+Runs automatically when a new object is created.
+
+def __init__(self, name):    
+    self.name = namep = Person("Suraj")
+
+2. __str__() — User-friendly representation
+Defines what is displayed when we use print(obj).
+def __str__(self):   
+ return f"Name: {self.name}"
+ print(p)  # Name: Suraj
+
+
+
+3. __repr__() — Developer-friendly representation
+Provides a useful representation of an object, mainly for debugging.
+def __repr__(self):    
+ return f"Person(name={self.name!r})"
+ print(repr(p))  # Person(name='Suraj')
+
+
+
+4. __eq__() — Compare objects
+Defines what == means when comparing two objects.
+
+def __eq__(self, other):   
+ return self.name == other.name
+  p1 = Person("Suraj")
+  p2 = Person("Suraj")
+  print(p1 == p2)  # True
+
+
+
+5. __contains__() — Check item existence
+Defines how the in operator checks whether an item exists in an object.
+def __contains__(self, skill):
+    return skill in self.skillsprint("Python" in p)  # True (if Python is in p.skills)
+
+
+
+Quick revision
+Method	Purpose	Automatically triggered by
+__init__()	Initialize object data	Person(...)
+__str__()	User-friendly output	print(obj)
+__repr__()	Developer-friendly output	repr(obj)
+__eq__()	Compare equality	obj1 == obj2
+__contains__()	Check item existence	item in obj
+Remember: Magic methods let you customize how Python objects behave with built-in operations.

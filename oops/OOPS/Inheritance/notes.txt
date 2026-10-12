@@ -1,0 +1,20 @@
+Inheritance
+
+super() - to access parents attributes and methods we use super
+
+**kwargs - 
+    a special syntax used in function definitions to 
+    accept an arbitrary number of keyword arguments (named arguments)
+
+    The double asterisk (**) is the actual operator that tells Python 
+    to collect all extra named arguments passed into the function 
+    and package them into a standard dictionary. 
+
+
+
+Type	            Meaning
+Single	            One parent → one child
+Multiple	        Multiple parents → one child
+Multilevel	        Parent → child → grandchild
+Hierarchical	       One parent → multiple children
+Hybrid	Combination of inheritance types

@@ -1,0 +1,5 @@
+Keyword	 |   When it executes
+try     -> Executes the code that might fail.
+except  -> Executes if a matching exception occurs.
+else    -> Executes only if no exception occurs in try.
+finally -> Executes whether an exception occurs or not, subject to exceptional process termination.
